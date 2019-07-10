@@ -15,7 +15,7 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN pip3 install notebook
 
 #run jupyter
-CMD ["jupyter-notebook", "--ip", "0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''", "--allow-root", "/"]
+CMD ["jupyter-notebook", "--ip", "0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''", "--allow-root", "--no-browser", "/"]
 
 #use this port
 EXPOSE 8888
