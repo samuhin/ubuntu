@@ -1,7 +1,7 @@
 FROM ubuntu
 
 #update, clean, install jupyter-notebook
-RUN apt update && apt upgrade -y && \
+RUN apt update && apt upgrade -y && apt autoremove -y && \
 	apt install python3-pip -y && \
 	apt clean && \
 	rm -rf /var/lib/apt/lists/* && \
